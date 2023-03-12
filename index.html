@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blinks snacks website</title>
+    <link rel="stylesheet" href="/blinks.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/css mins/all.min.css">
+</head>
+<body>
+    <div class="bg-warning fw-bold text-light text-center pt-1">ENJOY THE BEST SNACKS WITH BLINK</div>
+    <nav class="navbar navbar-expand-md bg-dark text-light navbar-dark nav-top" id="navbar-fixed">
+        <div class="container-md">
+            <h1>
+                <a href="#" class="navbar-brand fw-bold fs-1"><span class="text-warning">B</span>LINK</a>
+            </h1>
+
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navmenu"
+                >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="navbar-item">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#sign-in" class="nav-link fw-bold">Sign in</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#create-account" class="nav-link fw-bold">Create Account</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#cart" class="nav-link fw-bold text-warning"><i class="fa fa-cart-arrow-down" aria-hidden="true" id="cartNav"></i>Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- showcase area -->
+    <section class="showcase">
+        <div class="container">
+            <div class="row ">
+                <div class="col-sm-6" style="margin-top: 90px;">
+                    <div class="card p-2 bg-dark text-light">
+                        <div class="card-title">
+                            <h1 class="text-center text">Shop Snacks With Blink</h1>
+                            <div class="error-msg bg-danger text-light text-center fw-bold"></div>
+                        </div>
+                        <div class="card-body pt-0">
+                            <p>Then get it delivered under 60 minutes. Boom, simple</p>
+                            <div class="form-check">
+                                <input class="form-check-input text-bg-warning check" type="checkbox" value="" id="flexCheckDefault">
+                                  <p>I'm sending a gift <i class="fas fa-gift text-warning"></i></p>
+                                </label>
+                            </div>
+                            <input type="text" type="text" class="form-control" placeholder="Enter delivery address to shop" id="shopnow-input">
+                            <a href="#" class="btn btn-warning text-light mt-2 w-100 fs-5 fw-bold" data-bs-toggle="modal" data-bs-target="#shop-now" id="shopnow-btn">Shop now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- modal for sign-in -->
+    <div class="modal fade" id="sign-in" tabindex="-1" aria-labelledby="sign-in" aria-hidden="true">
+        <div class="modal-dialog w-50" id="sign-in">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="sign-in">Sign-In With Blink</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-floating mb-3 sign-in-put">
+                    <input type="email" class="form-control email" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control sign-in" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                    <button type="button" class="btn btn-warning w-100 mt-3 fw-bold" id="signin-btn">SIGN-IN</button>
+                </div>
+                <hr>
+                <p>By clicking Sign-Up, you agree to the terms of use.</p>
+                <button class="btn btn-outline-warning btn-large w-100"><a><i class="fab fa-twitter"></i> Sign up with Facebook</a></button>
+                <button class="btn btn-outline-warning btn-large w-100 mt-3"><a><i class="fab fa-google"></i>  Sign up with Google</a></button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- modal for create account -->
+    <div class="modal fade" id="create-account" tabindex="-1" aria-labelledby="create-account" aria-hidden="true">
+        <div class="modal-dialog w-50" id="create-account">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="create-account">Create Account With Blink</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="createAcc">
+                <div class="form-floating mb-3 createAcc">
+                    <input type="text" class="form-control first-name" id="floatingInput" placeholder="Example:JoshuaOzibo">
+                    <label for="floatingInput">Enter First-Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control last-name" id="floatingInput" placeholder="Example:JoshuaOzibo">
+                        <label for="floatingInput">Enter Last-Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="Email" class="form-control acc-email" id="floatingEmail" placeholder="Example:JoshuaOzibo">
+                        <label for="floatingInput">Enter Email</label>
+                    </div>
+                    <p>Do You Want To Recieve Updates By Email? 
+                        <div class="form-check">
+                            <input class="form-check-input text-bg-warning" type="checkbox" value="" id="flexCheckDefault">
+                            <p>YES?</p> 
+                        </div>
+                    </p>
+                    <div class="form-floating">
+                        <input type="password" class="form-control acc-password" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                  <button type="button" class="btn btn-warning w-100 mt-3 fw-bold" id="CreateAcc-btn">CREATE ACCOUNT</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- modal for cart -->
+    <div class="modal fade" id="cart" tabindex="-1" aria-labelledby="cart" aria-hidden="true">
+        <div class="modal-dialog" id="cart">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="cart">ADD CART</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body cartBody">
+                
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- list of snacks -->
+    <section class="p-5 text-center">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-md-3 col-sm-6">
+                    <a href="#pizza" class="btn btn-outline-warning w-100">Pizza</a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#shawarma" class="btn btn-outline-warning  w-100">Shawarma</a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#barbeque" class="btn btn-outline-warning  w-100">Barbeque</a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#burger" class="btn btn-outline-warning  w-100">Burger</a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#cake" class="btn btn-outline-warning  w-100">Cake</a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#Chips" class="btn btn-outline-warning  w-100">Chips</a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#doughnut" class="btn btn-outline-warning  w-100">Doughnut</a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#ice-cream" class="btn btn-outline-warning  w-100">Ice Cream</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- each snacks -->
+    <section class="p-5">
+        <div class="container">
+            <div class="col">
+                <h1 class="text-center">PIZZA</h1>
+                <div class="underline"></div>
+            </div>
+            <!-- row 1 for pizza -->
+            <div class="row g-3 mt-3" id="pizza">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/Pizza/pexels-jonathan-petersson-1166120.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p class="follow">
+                                Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <span class="store-item">
+                                <a  class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/Pizza/pexels-edward-eyer-1049620.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a class="btn btn-outline-warning" id="addbtn"><i  class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies//Pizza/pexels-engin-akyurt-7813580.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/Pizza/pexels-kei-photo-2741457.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- row 2 for pizza -->
+            <div class="row g-3 mt-3">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/Pizza/pexels-pixabay-263041.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/Pizza/pexels-polina-tankilevitch-4109128.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/Pizza/pexels-pixabay-280453.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/Pizza/pexels-rehan-verma-3053082.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHAWARMA -->
+    <section class="p-5" id="shawarma">
+        <div class="container">
+            <div class="col">
+                <h1 class="text-center">SHAWARMA</h1>
+                <div class="underline-bg"></div>
+            </div>
+            <!-- row 1 for shawarma -->
+            <div class="row g-3 mt-3">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/shawarma/pexels-rodnae-productions-5779364.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/shawarma/Pita Shawarma.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/shawarma/pexels-rodnae-productions-5779423.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/shawarma/Shawarma Wrapped on Checkered Wax Pape.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- row 2 for shawarma -->
+            <div class="row g-3 mt-3">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/shawarma/Shawarma with Lettuce and Cucumber.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/shawarma/pexels-nishant-aneja-2955819.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/shawarma/pexels-dhanipicture-v-13292629.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/shawarma/pexels-rodnae-productions-5779382 (1).jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BARBEQUE -->
+    <section class="p-5" id="barbeque">
+        <div class="container">
+            <div class="col">
+                <h1 class="text-center">BARBEQUE</h1>
+                <div class="underline-bg"></div>
+            </div>
+            <!-- row 1 for barbeque -->
+            <div class="row g-3 mt-3">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/barbeque/Meat Skewers.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/barbeque/Grilled Meat.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/barbeque/Barbecue and Baked Tahing.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/barbeque/Grilled Meats.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- row 2 for barbeque -->
+            <div class="row g-3 mt-3">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/barbeque/pexels-ekaterina-bolovtsova-5702791.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/barbeque/pexels-gustavo-peres-9200388.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/barbeque/pexels-sharan-pagadala-12365244.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/barbeque/pexels-mustafa-türkeri-1651166.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BURGER -->
+    <section class="p-5" id="burger">
+        <div class="container">
+            <div class="col">
+                <h1 class="text-center">BURGER</h1>
+                <div class="underline"></div>
+            </div>
+            <!-- row 1 for BURGER -->
+            <div class="row g-3 mt-3">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/burger/pexels-engin-akyurt-3219483.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/burger/pexels-rajesh-tp-1633578.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/burger/pexels-tioroshi-lazaro-2874989.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/burger/pexels-jonathan-borba-2983101.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- row 2 for BURGER -->
+            <div class="row g-3 mt-3">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/burger/pexels-jonathan-borba-2983102.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/burger/pexels-valeria-boltneva-1199960.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/burger/pexels-engin-akyurt-2267538.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/burger/pexels-engin-akyurt-7479007.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- row for Cake -->
+    <section class="p-5" id="cake">
+        <div class="container">
+            <div class="col">
+                <h1 class="text-center">CAKE</h1>
+                <div class="underline"></div>
+            </div>
+            <div class="row g-3 mt-3">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/cake/pexels-erick-mufasa-1414234.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/cake/pexels-jess-bailey-designs-913136.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/cake/pexels-jusper-mwangi-2510104.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+        
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/cake/pexels-elli-1854652.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHIPS -->
+    <section class="p-5" id="Chips">
+        <div class="container">
+            <div class="col">
+                <h1 class="text-center">CHIPS</h1>
+                <div class="underline"></div>
+            </div>
+            <div class="row g-3 mt-3">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/chips/pexels-chan-walrus-1059940.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/chips/pexels-meggy-kadam-aryanto-12599942.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/chips/pexels-valeria-boltneva-1200354.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+        
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/chips/pexels-suzy-hazelwood-2966196.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- DOUGHNUTS -->
+    <section class="p-5" id="doughnut">
+        <div class="container">
+            <div class="col">
+                <h1 class="text-center">DOUGHNUT</h1>
+                <div class="underline-bg"></div>
+            </div>
+            <div class="row g-3 mt-3">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/doughnut/pexels-tijana-drndarski-3656119.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/doughnut/pexels-cottonbro-4686958.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/doughnut/pexels-nishant-aneja-2955820.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+        
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/doughnut/pexels-matthias-zomer-206130.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ICE CREAM -->
+    <section class="p-5" id="ice-cream">
+        <div class="container">
+            <div class="col">
+                <h1 class="text-center">ICE CREAM</h1>
+                <div class="underline-bg"></div>
+            </div>
+            <div class="row g-3 mt-3">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/ice cream/pexels-piriyonel-4875225.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/ice cream/pexels-roman-odintsov-5060903.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/ice cream/pexels-lukas-1352278.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+        
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow">
+                        <span id="pizza-body">
+                            <div class="overlay">
+                                <input type="button" class="btn  btn-outline-warning fw-bold " value="Sign-Up" id="btn-hover">
+                            </div>
+                            <img class="img-fluid p-2 img" src="/imagies/ice cream/pexels-lucie-liz-4698506.jpg">
+                        </span>
+                        <div class="card-body pt-0">
+                            <p>Lorem ipsum dolor sit amet consectetu
+                            </p>
+                        </div>
+                        <div class="card-header text-center text-bg-danger d-flex justify-content-between align-items-center">
+                            <p style="cursor: pointer;" class="fw-bold pt-2">$45.00</p>
+                            <a href="#" class="btn btn-outline-warning" id="addbtn"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section class="p-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <h1 class="text-center mb-5">ABOUT US</h1>
+                <div class="col-md">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Saepe molestiae
+                        eligendi culpa. Sint consectetur
+                        porro eligendi debitis minima dignissimos
+                        commodi recusandae ut voluptate impedit
+                        ea repudiandae vero ab, similique illum.
+                    </p>
+                </div>
+                <div class="col-md">
+                    <img src="/imagies/about imagies/pexels-miquel-ferran-gomez-figueroa-3814446.jpg" class="img-fluid">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- grid imagies -->
+    <section class="p-5">
+        <div class="container">
+            <h1 class="text-center">WE PUT SMILE ON FACES</h1>
+            <div class="row g-0 shadow">
+                <div class="col-md-8 col-sm-6">
+                    <div class="card p-2">
+                      <img src="/imagies/about imagies/pexels-koolshooters-7142954.jpg" class="img-top img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-3">
+                    <div class="card p-2">
+                      <img src="/imagies/about imagies/pexels-andres-ayrton-6550791.jpg" class="img-top img-fluid">
+                    </div>
+                    <div class="col-md">
+                        <div class="card p-2">
+                          <img src="/imagies/about imagies/pexels-rodnae-productions-8523164.jpg" class="img-top img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-3">
+                    <div class="card p-2">
+                      <img src="/imagies/about imagies/pexels-olia-danilevich-4762744.jpg" class="img-top img-fluid">
+                    </div>
+                    <div class="col-md">
+                        <div class="card p-2">
+                          <img src="/imagies/about imagies/pexels-ketut-subiyanto-4833671.jpg" class="img-top img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card p-2">
+                      <img src="/imagies/about imagies/pexels-amina-filkins-5560005.jpg" class="img-top img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="p-5 text-center bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <p>SNACK GOOD</p>
+                    <p>Shop</p>
+                    <p>Gift</p>
+                    <p>Corporate</p>
+                    <p>Vending Machine</p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <p>Nutrition Value</p>
+                    <p>Career</p>
+                    <p>Responsible Sourcing</p>
+                    <p>The Pantry-Blog</p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <p>STALK US</p>
+                    <p>Imperfect Snacks</p>
+                    <p>Contact</p>
+                    <p>FAQ</p>
+                    <p>Refund Policy</p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <p>Terms Of Service</p>
+                    <p>Privacy Policy</p>
+                    <p>Gift</p>
+                    <a href="#point" class="btn btn-outline-warning"><i class="fab fa-facebook"></i></i></a>
+                    <a href="#point" class="btn btn-outline-warning"><i class="fab fa-twitter"></i></i></a>
+                    <a href="#point" class="btn btn-outline-warning"><i class="fab fa-instagram"></i></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#" class="btn btn-warning fixed-bottom ms-auto" style="width: 50px; z-index: 5;"><i class="fa fa-arrow-circle-up"></i></a>
+
+    <div style="height: 0px;"></div>
+    <script src="/blinks.js"></script>
+    <script src="/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
